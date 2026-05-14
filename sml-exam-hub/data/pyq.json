@@ -1,0 +1,240 @@
+[
+  {
+    "id": "pyq-ct1-set1",
+    "exam": "CT1 - Set 1",
+    "year": "2024-25",
+    "totalMarks": 20,
+    "duration": "1 hour",
+    "questions": [
+      {
+        "id": "pyq-ct1s1-q1",
+        "question": "The best fit line method for data in Linear Regression?",
+        "options": ["A) Least Square Error", "B) Maximum Likelihood", "C) Logarithmic Loss", "D) Both A and B"],
+        "answer": "A) Least Square Error",
+        "marks": 1,
+        "co": 1,
+        "bl": 1,
+        "unit": "Unit 1",
+        "tags": ["MCQ", "important", "repeated"]
+      },
+      {
+        "id": "pyq-ct1s1-q2",
+        "question": "In terms of bias and variance. Which of the following is true when you fit Degree 2 polynomial?",
+        "options": ["A) Bias high, variance high", "B) Bias low, variance high", "C) Bias high, variance low", "D) Bias low, variance low"],
+        "answer": "D) Bias will be low, and variance will be low",
+        "marks": 1,
+        "co": 1,
+        "bl": 1,
+        "unit": "Unit 1",
+        "tags": ["MCQ", "important", "tricky"]
+      },
+      {
+        "id": "pyq-ct1s1-q3",
+        "question": "For Ridge Regression, if the regularization parameter = 0, what does it mean?",
+        "options": ["A) Large coefficients are not penalized", "B) Overfitting problems are not accounted for", "C) The loss function is same as OLS", "D) All of the above"],
+        "answer": "D) All of the above",
+        "marks": 1,
+        "co": 1,
+        "bl": 1,
+        "unit": "Unit 1",
+        "tags": ["MCQ", "important"]
+      },
+      {
+        "id": "pyq-ct1s1-q4",
+        "question": "What's the penalty term for the Lasso regression?",
+        "options": ["A) Square of magnitude of coefficients", "B) Square root of magnitude", "C) Absolute sum of coefficients", "D) Sum of coefficients"],
+        "answer": "C) The absolute sum of the coefficients",
+        "marks": 1,
+        "co": 1,
+        "bl": 1,
+        "unit": "Unit 1",
+        "tags": ["MCQ", "important", "repeated"]
+      },
+      {
+        "id": "pyq-ct1s1-q5",
+        "question": "Support Vector Machine (SVM) can be used for _____.",
+        "options": ["A) Classification only", "B) Regression only", "C) Classification and regression both", "D) None of these"],
+        "answer": "C) Classification and regression both",
+        "marks": 1,
+        "co": 1,
+        "bl": 1,
+        "unit": "Unit 2",
+        "tags": ["MCQ", "easy"]
+      },
+      {
+        "id": "pyq-ct1s1-q6",
+        "question": "Select the correct statements about the K-means algorithm. (Select two)",
+        "options": ["A) K-means is an unsupervised learning algorithm", "B) K-means is a clustering algorithm", "C) K-means is a supervised learning algorithm", "D) K-means is a classification algorithm"],
+        "answer": "A and B",
+        "marks": 1,
+        "co": 2,
+        "bl": 1,
+        "unit": "Unit 4",
+        "tags": ["MCQ", "important"]
+      },
+      {
+        "id": "pyq-ct1s1-q7",
+        "question": "In PCA, what are the principal components?",
+        "options": ["A) Features of the dataset", "B) Eigenvalues of the covariance matrix", "C) Eigenvectors of the covariance matrix", "D) Data points in the dataset"],
+        "answer": "C) Eigenvectors of the covariance matrix",
+        "marks": 1,
+        "co": 2,
+        "bl": 1,
+        "unit": "Unit 3",
+        "tags": ["MCQ", "important", "repeated"]
+      },
+      {
+        "id": "pyq-ct1s1-q8",
+        "question": "Which clustering algorithm is based on the concept of centroids?",
+        "options": ["a) K-Means", "b) DBSCAN", "c) Agglomerative", "d) Mean-Shift"],
+        "answer": "a) K-Means",
+        "marks": 1,
+        "co": 2,
+        "bl": 1,
+        "unit": "Unit 4",
+        "tags": ["MCQ", "easy"]
+      },
+      {
+        "id": "pyq-ct1s1-q9",
+        "question": "Spam Classification is an example for?",
+        "options": ["a) Naive Bayes", "b) Probabilistic condition", "c) Random Forest"],
+        "answer": "a) Naive Bayes",
+        "marks": 1,
+        "co": 2,
+        "bl": 1,
+        "unit": "Unit 5",
+        "tags": ["MCQ", "easy", "important"]
+      },
+      {
+        "id": "pyq-ct1s1-q10",
+        "question": "In the context of handwritten digits recognition, what is the purpose of feature extraction?",
+        "options": ["a) Convert images to binary format", "b) Resize images to standard size", "c) Extract relevant information for classification", "d) Remove noise from images"],
+        "answer": "c) To extract relevant information from the images for classification",
+        "marks": 1,
+        "co": 2,
+        "bl": 1,
+        "unit": "Unit 5",
+        "tags": ["MCQ", "easy"]
+      }
+    ]
+  },
+  {
+    "id": "pyq-ct2-set1",
+    "exam": "CT2 - Set 1",
+    "year": "2024-25",
+    "totalMarks": 20,
+    "duration": "1 hour",
+    "questions": [
+      {
+        "id": "pyq-ct2s1-q1",
+        "question": "Which of the following formulas is NOT a simple linear regression model?",
+        "options": ["a) Salary = a × Experience", "b) Salary = a × Experience + b", "c) Salary = a × Experience + b × Age", "d) All of the above"],
+        "answer": "c) Salary = a * Experience + b * Age",
+        "marks": 1,
+        "co": 2,
+        "bl": 1,
+        "unit": "Unit 1",
+        "tags": ["MCQ", "important", "easy"]
+      },
+      {
+        "id": "pyq-ct2s1-q2",
+        "question": "For Lasso Regression, if the regularization parameter is very high, which options are true?",
+        "options": ["A) Can be used to select important features", "B) Shrinks coefficients to exactly 0", "C) Same as OLS loss function", "D) Same as Ridge loss function"],
+        "answer": "A and B",
+        "marks": 1,
+        "co": 2,
+        "bl": 1,
+        "unit": "Unit 1",
+        "tags": ["MCQ", "important", "repeated"]
+      },
+      {
+        "id": "pyq-ct2s1-q3",
+        "question": "In MLR, the square of the multiple correlation coefficient or R² is called the",
+        "options": ["a) Coefficient of determination", "b) Variance", "c) Covariance", "d) Cross-product", "e) Big R"],
+        "answer": "a) Coefficient of determination",
+        "marks": 1,
+        "co": 2,
+        "bl": 1,
+        "unit": "Unit 1",
+        "tags": ["MCQ", "easy"]
+      },
+      {
+        "id": "pyq-ct2s1-q4",
+        "question": "In SVM, the dimension of the hyperplane depends upon which one?",
+        "options": ["A) Number of features", "B) Number of samples", "C) Number of target variables", "D) All of the above"],
+        "answer": "A) The number of features",
+        "marks": 1,
+        "co": 2,
+        "bl": 1,
+        "unit": "Unit 2",
+        "tags": ["MCQ", "important", "tricky"]
+      },
+      {
+        "id": "pyq-ct2s1-q5",
+        "question": "In SVM, if the number of input features is 2, then the hyperplane is a _____.",
+        "options": ["A) Line", "B) Circle", "C) Plane", "D) None of these"],
+        "answer": "A) Line",
+        "marks": 1,
+        "co": 2,
+        "bl": 1,
+        "unit": "Unit 2",
+        "tags": ["MCQ", "easy", "important"]
+      },
+      {
+        "id": "pyq-ct2s1-q6",
+        "question": "What is the primary goal of Principal Component Analysis (PCA)?",
+        "options": ["A) Classification", "B) Clustering", "C) Dimensionality reduction", "D) Regression"],
+        "answer": "C) Dimensionality reduction",
+        "marks": 1,
+        "co": 3,
+        "bl": 1,
+        "unit": "Unit 3",
+        "tags": ["MCQ", "easy", "important"]
+      },
+      {
+        "id": "pyq-ct2s1-q7",
+        "question": "In PCA, what is the relationship between the first principal component and the second principal component?",
+        "options": ["A) They are orthogonal (uncorrelated)", "B) They are positively correlated", "C) They are negatively correlated", "D) No defined relationship"],
+        "answer": "A) They are orthogonal (uncorrelated) to each other",
+        "marks": 1,
+        "co": 3,
+        "bl": 1,
+        "unit": "Unit 3",
+        "tags": ["MCQ", "important"]
+      },
+      {
+        "id": "pyq-ct2s1-q8",
+        "question": "What does Singular Value Decomposition (SVD) provide for a given matrix?",
+        "options": ["a) Eigenvalues and eigenvectors", "b) Orthogonal basis vectors", "c) Factorization into U, Σ, Vᵀ", "d) Inverse of the matrix"],
+        "answer": "c) Factorization into three matrices: U, Σ, and Vᵀ",
+        "marks": 1,
+        "co": 3,
+        "bl": 1,
+        "unit": "Unit 3",
+        "tags": ["MCQ", "important"]
+      },
+      {
+        "id": "pyq-ct2s1-q9",
+        "question": "How does the rank of a matrix relate to its SVD?",
+        "options": ["a) Equal to number of non-zero singular values", "b) Equal to number of non-zero rows", "c) Equal to number of columns", "d) Equal to sum of singular values"],
+        "answer": "a) The rank equals the number of non-zero singular values in Σ",
+        "marks": 1,
+        "co": 3,
+        "bl": 1,
+        "unit": "Unit 3",
+        "tags": ["MCQ", "tricky"]
+      },
+      {
+        "id": "pyq-ct2s1-q10",
+        "question": "In deep autoencoders, what is the primary purpose of the encoder component?",
+        "options": ["a) Reconstruct the input data", "b) Compress input into low-dimensional representation", "c) Generate synthetic data", "d) Classify the input data"],
+        "answer": "b) To compress the input data into a low-dimensional representation",
+        "marks": 1,
+        "co": 3,
+        "bl": 1,
+        "unit": "Unit 3",
+        "tags": ["MCQ", "important"]
+      }
+    ]
+  }
+]

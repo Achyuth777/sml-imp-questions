@@ -1,0 +1,339 @@
+[
+  {
+    "id": "unit1",
+    "unit": "Unit 1",
+    "title": "Linear Regression & Regularization",
+    "color": "#6366f1",
+    "topics": [
+      "Simple Linear Regression",
+      "Multiple Linear Regression",
+      "Least Squares Method",
+      "Bias-Variance Tradeoff",
+      "Ridge Regression (L2)",
+      "Lasso Regression (L1)",
+      "Elastic Net",
+      "Regularization Parameter (λ)"
+    ],
+    "summary": "Covers the fundamentals of regression analysis, curve fitting, and regularization techniques to prevent overfitting in predictive models.",
+    "questions": [
+      {
+        "id": "u1q1",
+        "question": "What is the best fit line method used in Linear Regression?",
+        "answer": "The Least Square Error (also called Ordinary Least Squares - OLS) method is used to find the best fit line. It minimizes the sum of squared differences between observed values and predicted values: minimize Σ(yᵢ - ŷᵢ)². This method is optimal (BLUE - Best Linear Unbiased Estimator) under the Gauss-Markov assumptions.",
+        "type": "2-mark",
+        "year": "CT1",
+        "tags": ["important", "repeated", "easy"],
+        "answer_key": "A) Least Square Error"
+      },
+      {
+        "id": "u1q2",
+        "question": "In terms of bias and variance, what is true when you fit a Degree 2 polynomial?",
+        "answer": "When fitting a Degree 2 polynomial: Bias will be low and Variance will be low. A degree-2 polynomial provides a good balance — it is flexible enough to capture non-linear patterns (low bias) without overfitting the training data (low variance). Higher-degree polynomials increase variance (overfitting), while very low-degree models increase bias (underfitting).",
+        "type": "2-mark",
+        "year": "CT1",
+        "tags": ["important", "tricky"],
+        "answer_key": "D) Bias will be low, and variance will be low"
+      },
+      {
+        "id": "u1q3",
+        "question": "For Ridge Regression, if the regularization parameter λ = 0, what does it mean?",
+        "answer": "If λ = 0 in Ridge Regression: (1) Large coefficients are NOT penalized, (2) Overfitting problems are not accounted for, and (3) The loss function becomes identical to the Ordinary Least Squares (OLS) loss function. Ridge = OLS when λ = 0. As λ → ∞, coefficients shrink toward 0 but never reach exactly 0.",
+        "type": "2-mark",
+        "year": "CT1",
+        "tags": ["important", "repeated"],
+        "answer_key": "D) All of the above"
+      },
+      {
+        "id": "u1q4",
+        "question": "What is the penalty term for Lasso Regression?",
+        "answer": "Lasso (Least Absolute Shrinkage and Selection Operator) uses L1 penalty: the absolute sum of the coefficients (Σ|βⱼ|). Loss = RSS + λΣ|βⱼ|. Unlike Ridge (L2), Lasso can shrink coefficients to exactly zero, effectively performing feature selection. This is the key difference between Lasso and Ridge regression.",
+        "type": "2-mark",
+        "year": "CT1",
+        "tags": ["important", "repeated"],
+        "answer_key": "C) The absolute sum of the coefficients"
+      },
+      {
+        "id": "u1q5",
+        "question": "Which formula is NOT a simple linear regression model?",
+        "answer": "Salary = a × Experience + b × Age is NOT a simple linear regression model — it is a Multiple Linear Regression (MLR) model because it uses two predictor variables (Experience and Age). Simple linear regression uses only one predictor: Y = a + bX. Any model with two or more predictors is called multiple linear regression.",
+        "type": "2-mark",
+        "year": "CT2",
+        "tags": ["easy", "important"],
+        "answer_key": "c) Salary = a * Experience + b * Age"
+      },
+      {
+        "id": "u1q6",
+        "question": "For Lasso Regression, if the regularization parameter is very high, which statements are true?",
+        "answer": "When λ is very high in Lasso Regression: (A) It can be used to select important features of a dataset — TRUE, (B) It shrinks coefficients of less important features to exactly 0 — TRUE. These are the two correct answers. Lasso performs automatic feature selection by zeroing out irrelevant features. The loss function is NOT the same as OLS or Ridge when λ is high.",
+        "type": "5-mark",
+        "year": "CT2",
+        "tags": ["important", "repeated"],
+        "answer_key": "A and B"
+      },
+      {
+        "id": "u1q7",
+        "question": "In MLR, what is the square of the multiple correlation coefficient (R²) called?",
+        "answer": "In Multiple Linear Regression (MLR), R² is called the Coefficient of Determination. It measures the proportion of variance in the dependent variable that is explained by the independent variables. R² ranges from 0 to 1; higher values indicate better model fit. Adjusted R² is used when comparing models with different numbers of predictors.",
+        "type": "2-mark",
+        "year": "CT2",
+        "tags": ["easy"],
+        "answer_key": "a) Coefficient of determination"
+      },
+      {
+        "id": "u1q8",
+        "question": "Explain Ridge and Lasso Regression with their loss functions and when to use each.",
+        "answer": "Ridge Regression (L2 Regularization):\n- Loss = RSS + λΣβⱼ² \n- Shrinks coefficients toward zero but NEVER to exactly zero\n- Works well when many features are mildly relevant\n- Handles multicollinearity well\n\nLasso Regression (L1 Regularization):\n- Loss = RSS + λΣ|βⱼ|\n- Can shrink coefficients to EXACTLY zero (feature selection)\n- Works well when few features are truly important\n- Creates sparse models\n\nElastic Net: Combines both L1 and L2 penalties.\n\nWhen to use:\n- Ridge: many small effects, correlated features\n- Lasso: sparse data, need feature selection\n- Elastic Net: both situations apply",
+        "type": "10-mark",
+        "year": "CT1-CT2",
+        "tags": ["important", "repeated", "10-mark"]
+      }
+    ]
+  },
+  {
+    "id": "unit2",
+    "unit": "Unit 2",
+    "title": "Support Vector Machines",
+    "color": "#8b5cf6",
+    "topics": [
+      "SVM Fundamentals",
+      "Hyperplane & Margin",
+      "Support Vectors",
+      "Kernel Trick",
+      "RBF Kernel",
+      "Soft Margin SVM",
+      "SVM for Regression (SVR)",
+      "Multi-class SVM"
+    ],
+    "summary": "Covers Support Vector Machines for classification and regression, including kernel methods for non-linear problems.",
+    "questions": [
+      {
+        "id": "u2q1",
+        "question": "Support Vector Machine (SVM) can be used for _____.",
+        "answer": "SVM can be used for both classification AND regression. For classification, it finds the optimal hyperplane that maximizes the margin between classes. For regression (SVR - Support Vector Regression), it finds a function within an ε-tube around data. SVM is highly versatile and effective in high-dimensional spaces.",
+        "type": "2-mark",
+        "year": "CT1",
+        "tags": ["easy", "important"],
+        "answer_key": "C) Classification and regression both"
+      },
+      {
+        "id": "u2q2",
+        "question": "In SVM, the dimension of the hyperplane depends upon which factor?",
+        "answer": "The dimension of the hyperplane in SVM depends on the NUMBER OF FEATURES (input dimensions). If n = number of features, the hyperplane has (n-1) dimensions. Specifically: if 1 feature → point, if 2 features → line, if 3 features → 2D plane, if n features → (n-1)-dimensional hyperplane. The number of samples doesn't determine the hyperplane's dimension.",
+        "type": "2-mark",
+        "year": "CT2",
+        "tags": ["important", "tricky"],
+        "answer_key": "A) The number of features"
+      },
+      {
+        "id": "u2q3",
+        "question": "In SVM, if the number of input features is 2, then the hyperplane is a _____.",
+        "answer": "If the number of input features is 2, the hyperplane in SVM is a LINE. In 2D feature space, the separating hyperplane has dimension 2-1 = 1, which is a line. In 3D space it's a plane, in 1D it's a point. The formula for a hyperplane: w·x + b = 0, where w is the weight vector perpendicular to the hyperplane.",
+        "type": "2-mark",
+        "year": "CT2",
+        "tags": ["easy", "important"],
+        "answer_key": "A) Line"
+      },
+      {
+        "id": "u2q4",
+        "question": "Explain the concept of margin in SVM and the role of support vectors.",
+        "answer": "In SVM, the MARGIN is the distance between the hyperplane and the nearest data points (support vectors) from each class.\n\nKey concepts:\n1. Support Vectors: Data points closest to the hyperplane; they 'support' (define) the decision boundary\n2. Functional Margin: yᵢ(w·xᵢ + b)\n3. Geometric Margin: Functional margin / ||w||\n4. Optimal Hyperplane: Maximizes the margin = 2/||w||\n\nObjective: Maximize 2/||w|| subject to yᵢ(w·xᵢ + b) ≥ 1\nEquivalent to: Minimize (1/2)||w||²\n\nLarger margin → Better generalization → Less overfitting\nOnly support vectors matter; other points can be removed without changing the decision boundary.",
+        "type": "10-mark",
+        "year": "CT1-CT2",
+        "tags": ["important", "repeated", "10-mark"]
+      },
+      {
+        "id": "u2q5",
+        "question": "What is the Kernel Trick in SVM? Explain RBF kernel.",
+        "answer": "The Kernel Trick allows SVM to handle non-linearly separable data by implicitly mapping data to a higher-dimensional space without computing the transformation explicitly.\n\nK(xᵢ, xⱼ) = φ(xᵢ)·φ(xⱼ)\n\nCommon Kernels:\n1. Linear: K(x,z) = x·z\n2. Polynomial: K(x,z) = (x·z + c)^d\n3. RBF (Radial Basis Function): K(x,z) = exp(-γ||x-z||²)\n   - Most popular kernel\n   - γ controls the influence radius of training examples\n   - Small γ → wide influence (underfitting risk)\n   - Large γ → narrow influence (overfitting risk)\n4. Sigmoid: K(x,z) = tanh(αx·z + c)\n\nAdvantage: Computationally efficient — never need to compute φ(x) explicitly.",
+        "type": "10-mark",
+        "year": "CT1",
+        "tags": ["important", "repeated", "10-mark"]
+      }
+    ]
+  },
+  {
+    "id": "unit3",
+    "unit": "Unit 3",
+    "title": "Dimensionality Reduction",
+    "color": "#06b6d4",
+    "topics": [
+      "Principal Component Analysis (PCA)",
+      "Eigenvectors & Eigenvalues",
+      "Covariance Matrix",
+      "Singular Value Decomposition (SVD)",
+      "Autoencoders",
+      "t-SNE",
+      "LDA"
+    ],
+    "summary": "Covers techniques to reduce the number of features while preserving maximum information, including PCA, SVD, and deep learning-based autoencoders.",
+    "questions": [
+      {
+        "id": "u3q1",
+        "question": "What is the primary goal of Principal Component Analysis (PCA)?",
+        "answer": "The primary goal of PCA is DIMENSIONALITY REDUCTION. PCA transforms high-dimensional data into a lower-dimensional space while retaining maximum variance. It finds orthogonal directions (principal components) of maximum variance in the data. Applications: noise reduction, visualization, computational efficiency, feature extraction before ML.",
+        "type": "2-mark",
+        "year": "CT2",
+        "tags": ["important", "easy"],
+        "answer_key": "C) Dimensionality reduction"
+      },
+      {
+        "id": "u3q2",
+        "question": "In PCA, what are the principal components?",
+        "answer": "Principal components are the EIGENVECTORS of the covariance matrix. They represent the directions of maximum variance in the data. The first principal component captures the most variance, the second (orthogonal to first) captures the next most, and so on. Eigenvalues indicate the amount of variance explained by each component.",
+        "type": "2-mark",
+        "year": "CT1",
+        "tags": ["important", "repeated"],
+        "answer_key": "C) Eigenvectors of the covariance matrix"
+      },
+      {
+        "id": "u3q3",
+        "question": "What is the relationship between the first and second principal components in PCA?",
+        "answer": "The first and second principal components are ORTHOGONAL (uncorrelated) to each other. This is a fundamental property of PCA. All principal components are mutually orthogonal, ensuring that they capture independent directions of variation. This orthogonality eliminates multicollinearity between the new features (principal components).",
+        "type": "2-mark",
+        "year": "CT2",
+        "tags": ["important", "tricky"],
+        "answer_key": "A) They are orthogonal (uncorrelated) to each other"
+      },
+      {
+        "id": "u3q4",
+        "question": "What does Singular Value Decomposition (SVD) provide for a given matrix?",
+        "answer": "SVD provides the factorization of a matrix into THREE matrices: A = UΣVᵀ where:\n- U: Left singular vectors (m×m orthogonal matrix)\n- Σ: Diagonal matrix of singular values (σ₁ ≥ σ₂ ≥ ... ≥ 0)\n- Vᵀ: Transpose of right singular vectors (n×n orthogonal matrix)\n\nApplications: PCA, image compression, LSI (Latent Semantic Indexing), recommendation systems, solving linear systems.",
+        "type": "5-mark",
+        "year": "CT2",
+        "tags": ["important"],
+        "answer_key": "c) Factorization into three matrices: U, Σ, and Vᵀ"
+      },
+      {
+        "id": "u3q5",
+        "question": "How does the rank of a matrix relate to its SVD?",
+        "answer": "The rank of a matrix equals the number of NON-ZERO singular values in Σ. In SVD (A = UΣVᵀ), the singular values on the diagonal of Σ that are non-zero determine the rank. This has practical implications: truncated SVD (keeping top k singular values) gives the best rank-k approximation of the original matrix.",
+        "type": "2-mark",
+        "year": "CT2",
+        "tags": ["important", "tricky"],
+        "answer_key": "a) Rank equals number of non-zero singular values"
+      },
+      {
+        "id": "u3q6",
+        "question": "In deep autoencoders, what is the primary purpose of the encoder component?",
+        "answer": "The encoder's primary purpose is to COMPRESS the input data into a low-dimensional representation (called the latent space or bottleneck). The encoder learns to extract the most important features, discarding noise. This compressed representation is then passed to the decoder which reconstructs the original input. Autoencoders are used for dimensionality reduction, anomaly detection, and generative models.",
+        "type": "2-mark",
+        "year": "CT2",
+        "tags": ["important"],
+        "answer_key": "b) To compress the input data into a low-dimensional representation"
+      },
+      {
+        "id": "u3q7",
+        "question": "Explain PCA step by step with mathematical formulation.",
+        "answer": "PCA Step-by-Step:\n\n1. Standardize the data (zero mean, unit variance):\n   X_std = (X - μ) / σ\n\n2. Compute the Covariance Matrix:\n   C = (1/n-1) × Xᵀ × X\n\n3. Compute Eigenvectors and Eigenvalues:\n   C × v = λ × v\n   where v = eigenvectors, λ = eigenvalues\n\n4. Sort eigenvectors by decreasing eigenvalues\n\n5. Select top k eigenvectors (principal components)\n\n6. Transform the data:\n   X_pca = X × W  (where W = matrix of top k eigenvectors)\n\nVariance Explained:\n   Explained ratio = λᵢ / Σλⱼ\n\nRule of thumb: Retain components explaining 95%+ variance\n\nSVD connection: SVD provides a numerically stable way to compute PCA.",
+        "type": "10-mark",
+        "year": "CT1-CT2",
+        "tags": ["important", "repeated", "10-mark"]
+      }
+    ]
+  },
+  {
+    "id": "unit4",
+    "unit": "Unit 4",
+    "title": "Clustering Algorithms",
+    "color": "#10b981",
+    "topics": [
+      "K-Means Clustering",
+      "DBSCAN",
+      "Hierarchical Clustering",
+      "Agglomerative Clustering",
+      "Mean-Shift",
+      "Cluster Evaluation (Silhouette, Elbow)",
+      "Distance Metrics"
+    ],
+    "summary": "Covers unsupervised learning clustering techniques including centroid-based, density-based, and hierarchical approaches.",
+    "questions": [
+      {
+        "id": "u4q1",
+        "question": "Which clustering algorithm is based on the concept of centroids?",
+        "answer": "K-MEANS clustering is based on centroids. The algorithm works by: (1) Initialize k centroids randomly, (2) Assign each point to the nearest centroid, (3) Update centroids as the mean of assigned points, (4) Repeat until convergence. DBSCAN uses density, Hierarchical/Agglomerative uses distance-based merging, Mean-Shift also uses density but tracks modes.",
+        "type": "2-mark",
+        "year": "CT1",
+        "tags": ["easy", "important"],
+        "answer_key": "a) K-Means"
+      },
+      {
+        "id": "u4q2",
+        "question": "Select the correct statements about the K-means algorithm.",
+        "answer": "K-means is: (A) An UNSUPERVISED learning algorithm — TRUE (no labels needed), (B) A CLUSTERING algorithm — TRUE. K-means is NOT a supervised learning algorithm (option C) and NOT a classification algorithm in the traditional sense (it does assign cluster labels, but without ground-truth labels during training). K-means minimizes within-cluster sum of squares (WCSS).",
+        "type": "5-mark",
+        "year": "CT1",
+        "tags": ["important", "easy"],
+        "answer_key": "A and B"
+      },
+      {
+        "id": "u4q3",
+        "question": "Explain the K-Means algorithm with its limitations and how to choose K.",
+        "answer": "K-Means Algorithm:\n\nObjective: Minimize WCSS = Σᵢ Σₓ∈Cᵢ ||x - μᵢ||²\n\nSteps:\n1. Choose k (number of clusters)\n2. Initialize k centroids (random or K-means++)\n3. E-step: Assign each point to nearest centroid\n4. M-step: Update centroids = mean of cluster points\n5. Repeat 3-4 until no assignment changes\n\nChoosing K:\n- Elbow Method: Plot WCSS vs k; pick 'elbow' point\n- Silhouette Score: Measure (b-a)/max(a,b); higher = better\n- Gap Statistic\n\nLimitations:\n- Must specify k in advance\n- Sensitive to initialization (use K-means++)\n- Assumes spherical clusters\n- Sensitive to outliers\n- Fails on non-convex clusters\n\nTime Complexity: O(n×k×t×d) where t=iterations, d=dimensions",
+        "type": "10-mark",
+        "year": "CT1-CT2",
+        "tags": ["important", "repeated", "10-mark"]
+      },
+      {
+        "id": "u4q4",
+        "question": "What is DBSCAN and how does it differ from K-Means?",
+        "answer": "DBSCAN (Density-Based Spatial Clustering of Applications with Noise):\n\nKey Parameters:\n- ε (epsilon): radius of neighborhood\n- MinPts: minimum points in ε-neighborhood\n\nPoint Types:\n- Core Point: ≥ MinPts points within ε\n- Border Point: < MinPts within ε, but near a core point\n- Noise Point: Neither core nor border\n\nVs K-Means:\n| Feature | K-Means | DBSCAN |\n|---------|---------|--------|\n| K needed | Yes | No |\n| Shape | Spherical | Any shape |\n| Outliers | Included | Detected |\n| Scalability | Better | Moderate |\n\nDBSCAN excels at irregular-shaped clusters and noise detection.",
+        "type": "10-mark",
+        "year": "CT2",
+        "tags": ["important"]
+      }
+    ]
+  },
+  {
+    "id": "unit5",
+    "unit": "Unit 5",
+    "title": "Probabilistic Methods & Applications",
+    "color": "#f59e0b",
+    "topics": [
+      "Naive Bayes Classifier",
+      "Bayes' Theorem",
+      "Random Forest",
+      "Ensemble Methods",
+      "Handwritten Digit Recognition",
+      "Spam Classification",
+      "Feature Extraction",
+      "Cross-Validation"
+    ],
+    "summary": "Covers probabilistic classifiers, ensemble methods, and real-world applications including spam detection and digit recognition.",
+    "questions": [
+      {
+        "id": "u5q1",
+        "question": "Spam Classification is an example for which algorithm?",
+        "answer": "Spam Classification is a classic example of NAIVE BAYES classifier. Naive Bayes applies Bayes' theorem with the 'naive' assumption of conditional independence between features (words). For spam detection: P(Spam|words) ∝ P(Spam) × ΠP(wordᵢ|Spam). Despite the independence assumption being unrealistic, it works very well in practice for text classification.",
+        "type": "2-mark",
+        "year": "CT1",
+        "tags": ["easy", "important"],
+        "answer_key": "a) Naive Bayes"
+      },
+      {
+        "id": "u5q2",
+        "question": "In the context of handwritten digit recognition, what is the purpose of feature extraction?",
+        "answer": "Feature extraction in handwritten digit recognition is used to EXTRACT RELEVANT INFORMATION from images for classification. Rather than using raw pixel values directly, feature extraction identifies meaningful patterns: strokes, curves, edges, spatial arrangements. This reduces dimensionality, improves accuracy, and makes the classifier more robust to variations in handwriting style.",
+        "type": "2-mark",
+        "year": "CT1",
+        "tags": ["easy", "important"],
+        "answer_key": "c) To extract relevant information from images for classification"
+      },
+      {
+        "id": "u5q3",
+        "question": "Explain Naive Bayes classifier with Bayes' theorem and its assumptions.",
+        "answer": "Naive Bayes Classifier:\n\nBayes' Theorem:\nP(C|X) = P(X|C) × P(C) / P(X)\n\nWhere:\n- P(C|X) = Posterior (class given features)\n- P(X|C) = Likelihood (features given class)\n- P(C) = Prior (class probability)\n- P(X) = Evidence (constant)\n\nNaive Assumption:\nFeatures are CONDITIONALLY INDEPENDENT given the class:\nP(X|C) = P(x₁|C) × P(x₂|C) × ... × P(xₙ|C)\n\nTypes:\n1. Gaussian NB: Features follow Gaussian distribution\n2. Multinomial NB: For word counts (text)\n3. Bernoulli NB: Binary features\n\nAdvantages:\n- Fast, simple, scalable\n- Works well with small data\n- Handles multiple classes naturally\n\nDisadvantages:\n- Independence assumption rarely holds\n- Zero probability problem (use Laplace smoothing)\n\nApplications: Spam filter, sentiment analysis, document classification",
+        "type": "10-mark",
+        "year": "CT1-CT2",
+        "tags": ["important", "repeated", "10-mark"]
+      },
+      {
+        "id": "u5q4",
+        "question": "Explain Random Forest and how it improves upon a single Decision Tree.",
+        "answer": "Random Forest is an ENSEMBLE method that builds multiple decision trees and aggregates their predictions.\n\nAlgorithm (Bagging + Feature Randomness):\n1. Draw n bootstrap samples from training data\n2. For each sample, build a Decision Tree:\n   - At each split, consider only √p features (random subspace)\n   - Grow tree to maximum depth (no pruning)\n3. For classification: majority vote\n   For regression: average predictions\n\nVs Single Decision Tree:\n| Feature | Decision Tree | Random Forest |\n|---------|--------------|---------------|\n| Variance | High | Low |\n| Bias | Low | Low |\n| Overfitting | Yes | Resistant |\n| Interpretability | High | Low |\n| Speed | Fast | Slower |\n\nKey Concepts:\n- OOB (Out-of-Bag) error: ~37% samples not in bootstrap\n- Feature Importance: Based on impurity decrease\n- Hyperparameters: n_estimators, max_depth, min_samples_split",
+        "type": "10-mark",
+        "year": "CT2",
+        "tags": ["important", "10-mark"]
+      }
+    ]
+  }
+]

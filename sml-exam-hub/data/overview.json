@@ -1,0 +1,26 @@
+{
+  "subject": "Statistical Machine Learning",
+  "code": "SML",
+  "semester": "VI",
+  "department": "Computer Science & Engineering",
+  "university": "Sample University",
+  "description": "A comprehensive study of statistical foundations and machine learning algorithms including regression, classification, clustering, and dimensionality reduction techniques.",
+  "totalUnits": 5,
+  "examPattern": {
+    "ct1": { "name": "Continuous Test 1", "marks": 20, "units": "Unit 1-2" },
+    "ct2": { "name": "Continuous Test 2", "marks": 20, "units": "Unit 3-5" },
+    "end_sem": { "name": "End Semester", "marks": 60, "units": "Unit 1-5" }
+  },
+  "importantTopics": [
+    "Ridge vs Lasso Regression",
+    "SVM Hyperplane & Kernel Trick",
+    "PCA Step-by-Step",
+    "K-Means Algorithm",
+    "Naive Bayes Classifier"
+  ],
+  "references": [
+    "Pattern Recognition and Machine Learning - Bishop",
+    "The Elements of Statistical Learning - Hastie, Tibshirani",
+    "Machine Learning - Tom Mitchell"
+  ]
+}

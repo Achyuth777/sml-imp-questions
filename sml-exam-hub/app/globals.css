@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ──────────────────────────────────────────────────────── */
+
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #f1f3f5;
+  --surface: #ffffff;
+  --surface-hover: #f8f9fa;
+  --surface-border: #e5e7eb;
+
+  --text-primary: #0a0a0a;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+
+  --accent: #6366f1;
+  --accent-light: #eef2ff;
+  --accent-dark: #4f46e5;
+
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  --sidebar-width: 260px;
+  --header-height: 56px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.06);
+}
+
+.dark {
+  --bg: #0c0c0f;
+  --bg-secondary: #111115;
+  --bg-tertiary: #18181d;
+  --surface: #16161a;
+  --surface-hover: #1e1e24;
+  --surface-border: #27272f;
+
+  --text-primary: #f4f4f6;
+  --text-secondary: #8b8b9a;
+  --text-tertiary: #5c5c6e;
+
+  --accent: #818cf8;
+  --accent-light: #1e1b4b;
+  --accent-dark: #6366f1;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────────── */
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--surface-border);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); }
+
+/* ─── Selection ──────────────────────────────────────────────────────────── */
+
+::selection {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+/* ─── Utility classes ────────────────────────────────────────────────────── */
+
+.text-primary   { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary  { color: var(--text-tertiary); }
+.bg-surface     { background: var(--surface); }
+.bg-secondary   { background: var(--bg-secondary); }
+.border-surface { border-color: var(--surface-border); }
+
+/* ─── Prose formatting for answers ──────────────────────────────────────── */
+
+.answer-prose {
+  white-space: pre-wrap;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.answer-prose strong { color: var(--text-primary); }
+
+/* ─── Sidebar scroll lock ────────────────────────────────────────────────── */
+
+.sidebar-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-border) transparent;
+}
+
+/* ─── Card transitions ───────────────────────────────────────────────────── */
+
+.card-expand {
+  overflow: hidden;
+  transition: max-height 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.2s ease;
+}
+
+/* ─── Progress bar ───────────────────────────────────────────────────────── */
+
+@keyframes progress-fill {
+  from { width: 0; }
+}
+
+.progress-bar-fill {
+  animation: progress-fill 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ─── Code blocks inside answers ─────────────────────────────────────────── */
+
+.answer-prose code {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--surface-border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.82em;
+  color: var(--accent);
+}
+
+/* ─── Tag pill ───────────────────────────────────────────────────────────── */
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* ─── Focus ring ─────────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Responsive sidebar overlay ────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+    z-index: 40;
+  }
+}

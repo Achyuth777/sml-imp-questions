@@ -1,0 +1,75 @@
+[
+  {
+    "id": "cs1",
+    "title": "Regression Formulas Quick Reference",
+    "unit": "Unit 1",
+    "color": "#6366f1",
+    "icon": "📐",
+    "items": [
+      { "label": "OLS Loss", "formula": "L = Σ(yᵢ - ŷᵢ)²", "note": "Minimize sum of squared residuals" },
+      { "label": "Ridge (L2)", "formula": "L = RSS + λΣβⱼ²", "note": "Coefficients → 0 but never 0" },
+      { "label": "Lasso (L1)", "formula": "L = RSS + λΣ|βⱼ|", "note": "Coefficients can = 0 (feature selection)" },
+      { "label": "Elastic Net", "formula": "L = RSS + λ₁Σ|βⱼ| + λ₂Σβⱼ²", "note": "Combines L1 and L2" },
+      { "label": "R² Score", "formula": "R² = 1 - SS_res/SS_tot", "note": "1 = perfect fit, 0 = no fit" },
+      { "label": "Bias-Variance", "formula": "Error = Bias² + Variance + Noise", "note": "Tradeoff central to ML" }
+    ]
+  },
+  {
+    "id": "cs2",
+    "title": "SVM Key Concepts",
+    "unit": "Unit 2",
+    "color": "#8b5cf6",
+    "icon": "⚡",
+    "items": [
+      { "label": "Decision Boundary", "formula": "w·x + b = 0", "note": "Separating hyperplane" },
+      { "label": "Margin", "formula": "M = 2/||w||", "note": "Maximize this" },
+      { "label": "SVM Objective", "formula": "Min ½||w||² s.t. yᵢ(w·xᵢ+b) ≥ 1", "note": "Constrained optimization" },
+      { "label": "RBF Kernel", "formula": "K(x,z) = exp(-γ||x-z||²)", "note": "Most popular kernel" },
+      { "label": "Polynomial Kernel", "formula": "K(x,z) = (x·z + c)^d", "note": "Degree d polynomial" },
+      { "label": "Hyperplane Dim", "formula": "dim = n_features - 1", "note": "2 features → line, 3 → plane" }
+    ]
+  },
+  {
+    "id": "cs3",
+    "title": "PCA & SVD Reference",
+    "unit": "Unit 3",
+    "color": "#06b6d4",
+    "icon": "🔢",
+    "items": [
+      { "label": "SVD", "formula": "A = UΣVᵀ", "note": "U, V orthogonal; Σ diagonal" },
+      { "label": "Covariance Matrix", "formula": "C = (1/n-1) XᵀX", "note": "After mean centering" },
+      { "label": "PCA Transform", "formula": "X_pca = X × W", "note": "W = eigenvectors matrix" },
+      { "label": "Eigen Equation", "formula": "C·v = λ·v", "note": "Find eigenvectors v, eigenvalues λ" },
+      { "label": "Explained Variance", "formula": "ratio = λᵢ / Σλⱼ", "note": "% variance per component" },
+      { "label": "Matrix Rank", "formula": "rank(A) = #non-zero σ in Σ", "note": "From SVD" }
+    ]
+  },
+  {
+    "id": "cs4",
+    "title": "K-Means & Clustering",
+    "unit": "Unit 4",
+    "color": "#10b981",
+    "icon": "🎯",
+    "items": [
+      { "label": "K-Means Objective", "formula": "Min Σᵢ Σₓ∈Cᵢ ||x - μᵢ||²", "note": "Minimize WCSS" },
+      { "label": "Silhouette Score", "formula": "s = (b-a)/max(a,b)", "note": "-1 to 1; higher = better" },
+      { "label": "DBSCAN Core Point", "formula": "|N_ε(p)| ≥ MinPts", "note": "ε-neighborhood has MinPts points" },
+      { "label": "Elbow Method", "formula": "Plot k vs WCSS", "note": "Pick elbow (diminishing returns)" },
+      { "label": "Centroid Update", "formula": "μᵢ = (1/|Cᵢ|) Σₓ∈Cᵢ x", "note": "Mean of cluster points" }
+    ]
+  },
+  {
+    "id": "cs5",
+    "title": "Naive Bayes & Probability",
+    "unit": "Unit 5",
+    "color": "#f59e0b",
+    "icon": "🎲",
+    "items": [
+      { "label": "Bayes Theorem", "formula": "P(C|X) = P(X|C)·P(C) / P(X)", "note": "Posterior = Likelihood × Prior / Evidence" },
+      { "label": "Naive Assumption", "formula": "P(X|C) = ΠP(xᵢ|C)", "note": "Features are independent given class" },
+      { "label": "MAP Decision", "formula": "ĉ = argmax P(C)·ΠP(xᵢ|C)", "note": "Maximum A Posteriori" },
+      { "label": "Laplace Smoothing", "formula": "P(xᵢ|C) = (count+α)/(N+α·|V|)", "note": "Handles zero probabilities" },
+      { "label": "Random Forest", "formula": "ŷ = majority_vote(T₁,...,Tₙ)", "note": "Ensemble of decision trees" }
+    ]
+  }
+]
